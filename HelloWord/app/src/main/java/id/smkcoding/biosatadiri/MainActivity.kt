@@ -22,17 +22,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        btnsave.setOnClickListener{goToProfilActivity() }
+        btnsave.setOnClickListener{validasiInput() }
 
-        fun setDataSpinnerGender(){
-            val adapter = ArrayAdapter.createFromResource(this,
+
+    }
+    fun setDataSpinnerGender(){
+        val adapter = ArrayAdapter.createFromResource(this,
             R.array.Jenis_Kelamin, android.R.layout.simple_spinner_item)
 
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-                 spinnerGender.adapter= adapter
-        }
-        fun validasiInput(){
+        spinnerGender.adapter= adapter
+    }
+    fun validasiInput(){
         NameInput = edtName.text.toString()
         AgeInput = edtAge.text.toString()
         EmailInput = edtEmail.text.toString()
@@ -54,7 +56,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-    }
     }
     private fun tampilToast(message: String){
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

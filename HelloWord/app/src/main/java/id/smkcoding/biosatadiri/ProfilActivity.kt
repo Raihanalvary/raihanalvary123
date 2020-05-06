@@ -6,6 +6,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_profil.*
 
 class ProfilActivity : AppCompatActivity() {
@@ -24,16 +25,17 @@ class ProfilActivity : AppCompatActivity() {
         btnCall.setOnClickListener{dialPhoneNumber(txtTelp.text.toString())}
 
 
+
     }
 
     private fun ambilData(){
         val bundle = intent.extras
 
         val nama = bundle?.getString("nama")
-        val gender = bundle?.getString("Gender")
-        val umur = bundle?.getString("Umur")
-        val email = bundle?.getString("Email")
-        val telp = bundle?.getString("Telp")
+        val gender = bundle?.getString("gender")
+        val umur = bundle?.getString("umur")
+        val email = bundle?.getString("email")
+        val telp = bundle?.getString("telp")
         val alamat = bundle?.getString("alamat")
 
         txtName.text=nama
@@ -72,18 +74,17 @@ class ProfilActivity : AppCompatActivity() {
     }
 
     private fun  dialPhoneNumber(phoneNumber: String){
-        val intent = Intent(Intent.ACTION_DIAL).apply{
+        val dialIntent = Intent(Intent.ACTION_DIAL).apply {
             data = Uri.parse("tel:$phoneNumber")
-
-        if (intent.resolveActivity(packageManager) != null){
+        }
+        if (dialIntent.resolveActivity(packageManager) != null){
             startActivity(intent)
-
         }
 
-        }
-    }
+
     }
 
+}
 
 
 
