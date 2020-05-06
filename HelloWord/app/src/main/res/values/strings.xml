@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BiosataDiri</string>
+
+    <string-array name="Jenis_Kelamin">
+        <item>Pilih Jenis Kelamin</item>
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+</resources>
