@@ -78,12 +78,9 @@ class ProfilActivity : AppCompatActivity() {
             data = Uri.parse("tel:$phoneNumber")
         }
         if (dialIntent.resolveActivity(packageManager) != null){
-            startActivity(intent)
+            startActivity(dialIntent)
         }
-
-
     }
-
 }
 
 
