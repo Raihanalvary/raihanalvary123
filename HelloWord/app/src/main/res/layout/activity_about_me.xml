@@ -9,7 +9,8 @@
     <ImageView
         android:id="@+id/iv_gambar"
         android:layout_width="200dp"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp"
+        android:src="@drawable/fotoku"/>
 
 
     <LinearLayout
@@ -17,24 +18,32 @@
         android:layout_height="match_parent"
         android:layout_toEndOf="@+id/iv_gambar"
         android:layout_toRightOf="@+id/iv_gambar"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama:Muhammad Raihan Alvary"/>
+            android:text="Nama:Muhammad Raihan Alvary"
+            android:layout_margin="9dp"
+            android:textStyle="bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email:raihanalvary123@gmail.com"/>
+            android:text="Email:raihanalvary123@gmail.com"
+            android:layout_margin="9dp"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No Telp:082230559479"/>
+            android:text="No Telp:082230559479"
+            android:layout_margin="9dp"
+            android:textStyle="bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Alamat:Malang,Jawa Timur,Indonesia"/>
+            android:text="Alamat:Malang,Jawa Timur,Indonesia"
+            android:layout_margin="9dp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
