@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             EmailInput.isEmpty()-> edtEmail.error = "Email tidak boleh kosong"
             TelpInput.isEmpty()-> edtTelp.error = "Telp tidak boleh kosong"
             AddressInput.isEmpty()-> edtAddress.error = "Alamat tidak boleh kosong"
+            AgeInput.isEmpty()-> edtAge.error = "Umur tidak boleh kosong"
 
             else->{
                 tampilToast("Navigasi ke halaman profil")
@@ -58,6 +59,8 @@ class MainActivity : AppCompatActivity() {
     private fun tampilToast(message: String){
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+
+
 
     private fun goToProfilActivity() {
         val intent = Intent(this, ProfilActivity::class.java)

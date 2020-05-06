@@ -2,6 +2,7 @@ package id.smkcoding.biosatadiri
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -20,8 +21,8 @@ class ProfilActivity : AppCompatActivity() {
         ambilData()
 
         btnEditName.setOnClickListener{navigasiKeEditProfil()}
-
         btnCall.setOnClickListener{dialPhoneNumber(txtTelp.text.toString())}
+
 
     }
 
@@ -63,11 +64,24 @@ class ProfilActivity : AppCompatActivity() {
                 txtName.text = result
             }else{
 
-                Toast.makeText()
+                Toast.makeText(this, "Edit failed", Toast.LENGTH_SHORT).show()
+
+
             }
         }
     }
-        
+
+    private fun  dialPhoneNumber(phoneNumber: String){
+        val intent = Intent(Intent.ACTION_DIAL).apply{
+            data = Uri.parse("tel:$phoneNumber")
+
+        if (intent.resolveActivity(packageManager) != null){
+            startActivity(intent)
+
+        }
+
+        }
+    }
     }
 
 
