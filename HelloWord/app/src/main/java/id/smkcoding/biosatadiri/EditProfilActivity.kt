@@ -29,8 +29,8 @@ class EditProfilActivity : AppCompatActivity() {
             setResult(Activity.RESULT_OK, result)
         } else {
 
-            setResult((Activity.RESULT_CANCELED)
-            )
+            setResult(Activity.RESULT_CANCELED)
+
             finish()
         }
 
